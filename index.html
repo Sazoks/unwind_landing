@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/normilize.min.css">
+
+    <!-- Шрифты -->
+    <link rel="stylesheet" href="./fonts/gilroy/stylesheet.css">
+    <link rel="stylesheet" href="./fonts/days_one/stylesheet.css">
+    <link rel="stylesheet" href="./fonts/montserrat/stylesheet.css">
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- Слайдер -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+</head>
+<body>
+    <header class="container_fluid header_container_fluid">
+        <div class="container header">
+            <a href="#" class="header__logo header__link">
+                <img src="./img/main_logo.png" alt="main_logo" class="header__logo_img">
+                <p class="header__logo_text">IT-трансформация<br> вашего бизнеса</p>
+            </a>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a href="#" class="header__link">Что делаем</a></li>
+                    <li class="header__item"><a href="#" class="header__link">Преимущества</a></li>
+                    <li class="header__item"><a href="#" class="header__link">Процесс</a></li>
+                </ul>
+            </nav>
+            <div class="header__right_section">
+                <div class="header__icons">
+                    <a href="#" class="header__link"><img src="./img/tg_icon.png" alt="tg_icon" class="header__icon">
+                    <a href="#" class="header__link"><img src="./img/whatapp_icon.png" alt="whatapp_icon" class="header__icon"></a>
+                    <a href="#" class="header__link"><img src="./img/email_icon.png" alt="email_icon" class="header__icon"></a>
+                </div>
+                <div class="header__phone">
+                    +7(495) 111-11-11
+                </div>
+                <button class="header__btn">Обсудить проект</button>
+
+                <!-- Mobile -->
+                <div id="header__burger_icon" class="header__burger_icon">
+                    <img src="./img/burger.png" alt="burger">
+                </div>
+            </div>
+        </div>
+        <div id="burger_menu" class="burger_menu">
+            <div class="burger_menu__logo">
+                <img src="./img/burger_logo.png" alt="berger_logo" class="burger_menu__logo_img">
+            </div>
+            <div class="burger_menu__title">
+                <p>IT-трансформация<br> вашего бизнеса</p>
+            </div>
+            <nav class="burger_menu__nav">
+                <div class="burger_menu__item">
+                    <a href="#" class="burger_menu__link">Что делаем</a>
+                </div>
+                <div class="burger_menu__item">
+                    <a href="#" class="burger_menu__link">Преимущества</a>
+                </div>
+                <div class="burger_menu__item">
+                    <a href="#" class="burger_menu__link">Процесс</a>
+                </div>
+            </nav>
+            <button class="burger_menu__btn">Обсудить проект</button>
+            <div class="burger_menu__phone">
+                +7(495) 111-11-11
+            </div>
+            <div class="burger_menu__icons">
+                <a href="#" class="header__link"><img src="./img/green_tg.png" alt="tg_icon" class="header__icon">
+                <a href="#" class="header__link"><img src="./img/green_whatapp.png" alt="whatapp_icon" class="header__icon"></a>
+                <a href="#" class="header__link"><img src="./img/green_email.png" alt="email_icon" class="header__icon"></a>
+            </div>
+        </div>
+    </header>
+    <section class="container_fluid main_container_fluid">
+        <div class="container">
+            <div class="main">
+                <div class="main__text">
+                    <h1 class="main__title">
+                        Разрабатываем крутые <span class="title_span">мобильные приложения</span>, 
+                        <span class="title_span">веб-сервисы</span> и <span class="title_span">корпоративные решения</span>
+                    </h1>
+                    <p class="main__desc">Подберем лучшее решение с учетом<br> ваших целей и возможностей</p>
+                    <button class="main__btn">Сделать крутой проект</button>
+                </div>
+                <div class="main__image">
+                    <img src="./img/main_preview.png" alt="main_preview" class="main__img">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="services">
+                <h1 class="services__title">Что мы <span class="title_span">создаем</span></h1>
+                <div class="services__list">
+                    <div class="services__item">
+                        <div class="services__image">
+                            <img src="./img/services_1.png" alt="services_1" class="services__img">
+                        </div>
+                        <div class="services__text services__text-right">
+                            <h3 class="services__subtitle">Мобильные приложения</h3>
+                            <p class="services__short_desc">Для ваших сотрудников и клиентов</p>
+                            <p class="services__desc">Разрабатываем надежные, функциональные и быстрые кроссплатформенные 
+                                мобильные приложения, которые легко интегрируются с Вашей CRM-системой 
+                                и помогают бизнесу расти. Готовы подключиться на любом этапе: от аналитики 
+                                и проектирования до поддержки и продвижения.</p>
+                        </div>
+                    </div>
+                    <div class="services__item">
+                        <div class="services__image" id="services__image_2_mobile">
+                            <img src="./img/services_2.png" alt="services_2" class="services__img">
+                        </div>
+                        <div class="services__text services__text-left">
+                            <h3 class="services__subtitle">Веб-приложения и сервисы</h3>
+                            <p class="services__short_desc">Не только front, но и back</p>
+                            <p class="services__desc">Проектируем удобные корпоративные порталы и личные кабинеты сотрудников. 
+                                Делаем современные продающие сайты с понятными простыми интерфейсами. 
+                                Воплощаем Ecomm-проекты: от небольших интернет-магазинов до полноценных маркетплейсов 
+                                и высоконагруженных сервисов.</p>
+                        </div>
+                        <div class="services__image" id="services__image_2_desktop">
+                            <img src="./img/services_2.png" alt="services_2" class="services__img">
+                        </div>
+                    </div>
+                    <div class="services__item">
+                        <div class="services__image">
+                            <img src="./img/services_3.png" alt="services_3" class="services__img">
+                        </div>
+                        <div class="services__text services__text-right">
+                            <h3 class="services__subtitle">Корпоративные решения</h3>
+                            <p class="services__short_desc">Автоматизируем Ваш бизнес</p>
+                            <p class="services__desc">Интегрируем CRM- и ERP-системы со сложной бизнес-логикой, способные 
+                                обработать информацию из множества источников. Повышаем удобство и функционал, 
+                                создавая крутые приложения, виджеты и боты. Помогаем улучшать сервис, обучать 
+                                сотрудников, повышать лояльность и увеличивать продажи.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="advantages">
+                <h1 class="advantages__title">Почему с нами - <span class="title_span">надежно</span></h1>
+                <div class="advantages__list">
+                    <div class="advantages__pair_item">
+                        <div class="advantages__item">
+                            <div class="advantages__image">
+                                <img src="./img/advant_1.png" alt="adv_1" class="advantages__img">
+                            </div>
+                            <div class="advantages__text">
+                                <h3 class="advantages__subtitle">Выступаем как<br> партнеры</h3>
+                                <p class="advantages__desc">Всегда предлагаем свои идеи, а не просто исполняем задачи</p>
+                            </div>
+                        </div>
+                        <div class="advantages__item">
+                            <div class="advantages__image">
+                                <img src="./img/advant_2.png" alt="adv_2" class="advantages__img">
+                            </div>
+                            <div class="advantages__text">
+                                <h3 class="advantages__subtitle">Соблюдаем<br> сроки</h3>
+                                <p class="advantages__desc">Четко следуем плану, даже если возрастает сложность проекта</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantages__pair_item">
+                        <div class="advantages__item">
+                            <div class="advantages__image">
+                                <img src="./img/advant_3.png" alt="adv_3" class="advantages__img">
+                            </div>
+                            <div class="advantages__text">
+                                <h3 class="advantages__subtitle">Погружаемся<br> глубоко</h3>
+                                <p class="advantages__desc">Наши аналитики с головой ныряют в проект, ничего не упуская из вида</p>
+                            </div>
+                        </div>
+                        <div class="advantages__item">
+                            <div class="advantages__image">
+                                <img src="./img/advant_4.png" alt="adv_4" class="advantages__img">
+                            </div>
+                            <div class="advantages__text">
+                                <h3 class="advantages__subtitle">Предоставляем<br> гарантии</h3>
+                                <p class="advantages__desc">Полгода гарантийной поддержки на все работы: исправим и улучшим</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container_fluid partners">
+            <div class="container">
+                <div class="partners__text">
+                    <h1 class="partners__title">Сделали <span class="title_span">крутые решения</span> для</h1>
+                    <p class="partners__desc">Компаний различных размеров: от стартапа до крупного бизнеса</p>
+                </div>
+                <div id="partners__slider" class="partners__slider">
+                    <div class="partners__item">
+                        <img src="./img/abz_voronova.png" alt="abz_voronova" class="partners__item_img">
+                    </div>
+                    <div class="partners__item">
+                        <img src="./img/channelservice.png" alt="channelservice" class="partners__item_img">
+                    </div>
+
+                </div>
+            </div>
+            </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="work">
+                <div class="work__text">
+                    <h1 class="work__title">Работаем от <span class="title_span">гипотезы</span>
+                        до <span class="title_span">продукта</span></h1>
+                    <p class="work__desc">От гипотез до продукта! Проводим исследования, тестируем 
+                        идеи, проектируем, запускаем и развиваем цифровые продукты и сервисы любого 
+                        уровня сложности</p>
+                </div>
+                <div class="work__cards">
+                    <div class="work__card">
+                        <div class="work__image">
+                            <img src="./img/work_1.png" alt="work_1" class="work__img">
+                        </div>
+                        <div class="work__text">
+                            <h3 class="work__card_title">Анализируем</h3>
+                            <p class="work__card_desc">Максимально погружаемся в бизнес-процессы, 
+                                детализируем требования и составляем подробное техническое задание</p>
+                        </div>
+                    </div>
+                    <div class="work__card work__card-right">
+                        <div class="work__image">
+                            <img src="./img/work_2.png" alt="work_2" class="work__img">
+                        </div>
+                        <div class="work__text">
+                            <h3 class="work__card_title">Проектируем</h3>
+                            <p class="work__card_desc">Создаем концепцию и разрабатываем с учетом 
+                                фирменного стиля, а если его нет – помогаем создать</p>
+                        </div>
+                    </div>
+                    <div class="work__card">
+                        <div class="work__image">
+                            <img src="./img/work_3.png" alt="work_3" class="work__img">
+                        </div>
+                        <div class="work__text">
+                            <h3 class="work__card_title">Разрабатываем</h3>
+                            <p class="work__card_desc">Пишем чистый и понятный код, всесторонне 
+                                тестируем на разных устройствах в разных условиях</p>
+                        </div>
+                    </div>
+                    <div class="work__card work__card-right">
+                        <div class="work__image">
+                            <img src="./img/work_4.png" alt="work_4" class="work__img">
+                        </div>
+                        <div class="work__text">
+                            <h3 class="work__card_title">Поддерживаем</h3>
+                            <p class="work__card_desc">Осуществляем всестороннюю всех проектов и 
+                                никогда не бросаем наших клиентов после запуска</p>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div id="right_arrow_1" class="work__arrow">
+                        <img src="./img/right_arrow.png" alt="right_arrow" class="work__arrow_img">
+                    </div>
+                    <div id="left_arrow" class="work__arrow">
+                        <img src="./img/left_arrow.png" alt="left_arrow" class="work__arrow_img">
+                    </div>
+                    <div id="right_arrow_2" class="work__arrow">
+                        <img src="./img/right_arrow.png" alt="right_arrow" class="work__arrow_img">
+                    </div>
+                </div>
+
+                <div class="work__cards_mobile">
+                    <div class="work__card_mobile">
+                        <div class="work__image_and_title_mobile">
+                            <div class="work__image_mobile">
+                                <img src="./img/work_1.png" alt="work_1_mobile" class="work__img_mobile">
+                            </div>
+                            <h3 class="work__card_title_mobile">Анализируем</h3>
+                        </div>
+                        <p class="work__card_desc_mobile">Максимально погружаемся в бизнес-процессы, 
+                            детализируем требования и составляем подробное техническое задание</p>
+                    </div>
+                    <div class="work__card_mobile">
+                        <div class="work__image_and_title_mobile">
+                            <div class="work__image_mobile">
+                                <img src="./img/work_2.png" alt="work_2_mobile" class="work__img_mobile">
+                            </div>
+                            <h3 class="work__card_title_mobile">Проектируем</h3>
+                        </div>
+                        <p class="work__card_desc_mobile">Создаем концепцию и разрабатываем с учетом 
+                            фирменного стиля, а если его нет – помогаем создать</p>
+                    </div>
+                    <div class="work__card_mobile">
+                        <div class="work__image_and_title_mobile">
+                            <div class="work__image_mobile">
+                                <img src="./img/work_3.png" alt="work_3_mobile" class="work__img_mobile">
+                            </div>
+                            <h3 class="work__card_title_mobile">Разрабатываем</h3>
+                        </div>
+                        <p class="work__card_desc_mobile">Пишем чистый и понятный код, всесторонне 
+                            тестируем на разных устройствах в разных условиях</p>
+                    </div>
+                    <div class="work__card_mobile">
+                        <div class="work__image_and_title_mobile">
+                            <div class="work__image_mobile">
+                                <img src="./img/work_4.png" alt="work_4_mobile" class="work__img_mobile">
+                            </div>
+                            <h3 class="work__card_title_mobile">Поддерживаем</h3>
+                        </div>
+                        <p class="work__card_desc_mobile">Осуществляем всестороннюю всех проектов и 
+                            никогда не бросаем наших клиентов после запуска</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- <section class="big_container" style="position: relative;">
+        <div id="support_left_ball" class="support_ball">
+            <img src="./img/left_ball.png" alt="left_ball class=" support_ball_img">
+        </div>
+        <div id="support_middle_ball" class="support_ball">
+            <img src="./img/middle_ball.png" alt="middle_ball" class="support_ball_img">
+        </div>
+        <div id="support_right_ball" class="support_ball">
+            <img src="./img/right_ball.png" alt="right_ball" class="support_ball_img">
+        </div>
+        <div class="container">
+            <div class="support">
+                <h1 class="support__title">
+                    <span class="title_span">Поддержим</span> проект после запуска
+                </h1>
+                <div class="support__cards">
+                    <div class="support__card">
+                        <div class="support__image">
+                            <img src="./img/support_1.png" alt="support_1" class="support__img">
+                        </div>
+                        <div class="support__text">
+                            <p>Digital-продвижение</p>
+                        </div>
+                    </div>
+                    <div class="support__card">
+                        <div class="support__image">
+                            <img src="./img/support_2.png" alt="support_2" class="support__img">
+                        </div>
+                        <div class="support__text">
+                            <p>Техническая поддержка</p>
+                        </div>
+                    </div>
+                    <div class="support__card">
+                        <div class="support__image">
+                            <img src="./img/support_3.png" alt="support_3" class="support__img">
+                        </div>
+                        <div class="support__text">
+                            <p>Доработки и обновления</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section>
+        <div class="container">
+            <div class="principle">
+                <h1 class="principle__title">Наш главный <span class="title_span">принцип</span></h1>
+                <p class="principle__desc">Не просто разработать приложение или сервис, а <span>помочь 
+                    вашему бизнесу!</span> Каждый проект мы делаем как для самих себя. Всегда максимально 
+                    вникаем в нюансы, делаем всесторонний анализ и предлагаем <span>наилучшие пути 
+                    решения</span> даже самой непростой задачи.</p>
+            </div>
+        </div>
+    </section>
+    <div class="container_fluid feedback_and_footer_container_fluid">
+        <section>
+            <div class="container_fluid" id="white_semi_ellipse"></div>
+            <div class="container">
+                <div class="feedback">
+                    <div class="feedback__form_and_text">
+                        <div class="feedback__text">
+                            <h2 class="feedback__text_title">
+                                Есть идея? Напишите и узнайте, чем мы можем быть 
+                                полезны для вас.
+                            </h2>
+                            <p class="feedback__text_desc">
+                                Заполните форму, и наш менеджер свяжется с вами 
+                                в течение суток
+                            </p>
+                        </div>
+                        <div class="feedback__form_block">
+                            <form class="feedback__form">
+                                <input type="text" name="" id="" placeholder="Имя" class="feedback__from_input">
+                                <input type="tel" name="" id="" placeholder="Телефон" class="feedback__from_input">
+                                <input type="email" name="" id="" placeholder="E-Mail" class="feedback__from_input">
+                                <input type="text" name="" id="" placeholder="Комментарий" class="feedback__from_input feedback__form_textarea">
+                                <p class="feedback__form_small_text">
+                                    Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных 
+                                    данных и ознакомились c политикой конфиденциальности
+                                </p>
+                                <button class="feedback__form_btn">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                    <h1 class="feedback__title">
+                        Давайте делать крутые проекты вместе!
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="footer">
+                    <div class="footer__logo_and_text">
+                        <a href="#" class="footer__image">
+                            <img src="./img/main_logo.png" alt="footer_logo" class="footer__logo">
+                        </a>
+                        <div class="footer__text">
+                            <p class="footer__company_name">Unwind, 2022. IT-трансформация вашего бизнеса</p>
+                            <a href="#" class="footer__privacy_policy">Политика конфиденциальности</a>
+                        </div>
+                    </div>
+                    <div class="footer__icons_and_email">
+                        <div class="footer__icons">
+                            <a href="#"><img src="./img/tg_icon_black.png" alt="tg_icon_black" class="footer__icon">
+                            <a href="#"><img src="./img/whatapp_icon_black.png" alt="whatapp_icon_black" class="footer__icon"></a>
+                            <a href="#"><img src="./img/email_icon_black.png" alt="email_icon_black" class="footer__icon"></a>
+                        </div>
+                        <div class="footer__email">
+                            <p>info@unwind.ru</p>
+                        </div>
+                    </div>
+                    <div class="footer__icons_and_email_mobile">
+                        <div class="footer__email">
+                            <p>info@unwind.ru</p>
+                        </div>
+                        <div class="footer__icons">
+                            <a href="#"><img src="./img/tg_icon_black.png" alt="tg_icon_black" class="footer__icon">
+                            <a href="#"><img src="./img/whatapp_icon_black.png" alt="whatapp_icon_black" class="footer__icon"></a>
+                            <a href="#"><img src="./img/email_icon_black.png" alt="email_icon_black" class="footer__icon"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
