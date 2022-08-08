@@ -43,4 +43,21 @@ window.onload = function() {
                     document.getElementById('burger_menu').style.display = 'none';
                 }
             });
+
+    // Обработчик анимации появления при скроле.
+    function onEntry(entry) {
+        entry.forEach(change => {
+            if (change.isIntersecting) {
+                change.target.classList.add('services__item_show');
+            }
+        });
+    }
+      
+    let options = {threshold: 0.3};
+    let observer = new IntersectionObserver(onEntry, options);
+    let elements = document.querySelectorAll('.services__item');
+    
+    for (let elm of elements) {
+        observer.observe(elm);
+    }
 }

@@ -203,6 +203,13 @@
     align-items: center;
     gap: 111px;
     margin-bottom: 107px;
+    transform: translateX(-80%);
+    transition: 2s;
+    opacity: 0;
+}
+.services__item_show {
+    transform: translateX(0%);
+    opacity: 1;
 }
 .services__text > h3, p {
     margin-bottom: 15px;
