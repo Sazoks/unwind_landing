@@ -86,8 +86,8 @@ if (animItems.length > 0) {
 
 // собираем все якоря; устанавливаем время анимации и количество кадров
 const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
-      animationTime = 300,
-      framesCount = 20;
+      animationTime = 500,
+      framesCount = 64;
 
 anchors.forEach(function(item) {
   // каждому якорю присваиваем обработчик события
@@ -96,18 +96,22 @@ anchors.forEach(function(item) {
     e.preventDefault();
     
     // для каждого якоря берем соответствующий ему элемент и определяем его координату Y
-    let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
-    
+    let range = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top;
+    let coordY = range + window.scrollY;
+    let scrollBy = range / framesCount;
+    let startWindowScrollY = window.scrollY;
+
+    // alert(window.scrollY);
+    // alert(scrollBy);
+    // alert(coordY);
+
     // запускаем интервал, в котором
     let scroller = setInterval(function() {
-      // считаем на сколько скроллить за 1 такт
-      let scrollBy = coordY / framesCount;
-      
       // если к-во пикселей для скролла за 1 такт больше расстояния до элемента
       // и дно страницы не достигнуто
-      if(scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
+      if (window.scrollY + scrollBy < coordY && window.innerHeight + window.scrollY < document.body.offsetHeight) {
         // то скроллим на к-во пикселей, которое соответствует одному такту
-        window.scrollBy(0, scrollBy);
+        window.scrollBy(startWindowScrollY, scrollBy);
       } else {
         // иначе добираемся до элемента и выходим из интервала
         window.scrollTo(0, coordY);

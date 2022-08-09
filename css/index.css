@@ -82,6 +82,7 @@
 }
 .header__nav {
     height: 100%;
+    display: flex;
 }
 .header__item button {
     height: 100%;
@@ -91,11 +92,6 @@
 }
 .header__item button:hover {
     cursor: pointer;
-}
-.header__list {
-    height: 100%;
-    display: flex;
-    list-style-type: none;
 }
 .header__link {
     font-style: normal;
@@ -401,7 +397,7 @@
     padding: 34px;
     margin-bottom: 30px;
     opacity: 0;
-    transition: 1s;
+    transition: 1.2s;
 }
 .work__card._active {
     opacity: 1;
@@ -428,7 +424,7 @@
 .work__arrow {
     position: absolute;
     transform: scale(0);
-    transition: 1s;
+    transition: 1.5s;
 }
 .work__arrow._active {
     transform: scale(1);
