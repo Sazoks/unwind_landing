@@ -194,8 +194,9 @@
 
 
 /* Услуги */
-.services {
+#services {
     margin-bottom: 130px;
+    overflow: hidden;
 }
 .services__item {
     display: flex;
@@ -207,7 +208,10 @@
     transition: 2s;
     opacity: 0;
 }
-.services__item_show {
+.services__item:nth-child(2) {
+    transform: translateX(80%);
+}
+.services__item._active {
     transform: translateX(0%);
     opacity: 1;
 }
@@ -257,6 +261,7 @@
 /* Преимущества компании */
 .advantages {
     margin-bottom: 130px;
+    overflow-y: hidden;
 }
 .advantages__list {
     display: flex;
@@ -268,6 +273,25 @@
 }
 .advantages__item {
     flex-basis: 22%;
+    opacity: 0;
+    transform: translateY(50%);
+    transition: 1s;
+}
+.advantages__pair_item:nth-child(1) 
+> .advantages__item:nth-child(2) {
+    transition-delay: .1s;
+}
+.advantages__pair_item:nth-child(2) 
+> .advantages__item:nth-child(1) {
+    transition-delay: .25s;
+}
+.advantages__pair_item:nth-child(2) 
+> .advantages__item:nth-child(2) {
+    transition-delay: .4s;
+}
+.advantages__item._active {
+    transform: translateY(0%);
+    opacity: 1;
 }
 .advantages__image {
     text-align: center;
@@ -376,6 +400,11 @@
     border-radius: 20px;
     padding: 34px;
     margin-bottom: 30px;
+    opacity: 0;
+    transition: 1s;
+}
+.work__card._active {
+    opacity: 1;
 }
 .work__card-right {
     float: right;
@@ -398,6 +427,11 @@
 }
 .work__arrow {
     position: absolute;
+    transform: scale(0);
+    transition: 1s;
+}
+.work__arrow._active {
+    transform: scale(1);
 }
 #right_arrow_1 {
     top: 7.5%;
@@ -576,12 +610,13 @@
     line-height: 18px; /* identical to box height */
     color: #405400;
     border: none;
-    background: linear-gradient(97.75deg, #EFEFEF 1.73%, #FFFFFF 51.12%, #EFEFEF 84.18%);
+    background: white;
     border-radius: 10px;
     padding: 27px 80px 27px 80px;
 }
 .feedback__form_btn:hover {
     cursor: pointer;
+    background: rgb(236, 236, 236);
 }
 .feedback__text_title {
     font-family: 'Days One';
@@ -1044,6 +1079,11 @@
         border-radius: 20px;
         padding: 34px;
         margin-bottom: 30px;
+        opacity: 0;
+        transition: 1s;
+    }
+    .work__card_mobile._active {
+        opacity: 1;
     }
     .work__image_and_title_mobile {
         display: flex;
