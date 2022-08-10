@@ -70,15 +70,15 @@
                 <p>IT-трансформация<br> вашего бизнеса</p>
             </div>
             <nav class="burger_menu__nav">
-                <div class="burger_menu__item">
-                    <a href="#" class="burger_menu__link">Что делаем</a>
-                </div>
-                <div class="burger_menu__item">
-                    <a href="#" class="burger_menu__link">Преимущества</a>
-                </div>
-                <div class="burger_menu__item">
-                    <a href="#" class="burger_menu__link">Процесс</a>
-                </div>
+                <a href="#services" class="burger_menu__link">
+                    <button class="burger_menu__nav_btn">Что делаем</button>
+                </a>
+                <a href="#advantages" class="burger_menu__link">
+                    <button class="burger_menu__nav_btn">Преимущества</button>
+                </a>
+                <a href="#work" class="burger_menu__link">
+                    <button class="burger_menu__nav_btn">Процесс</button>
+                </a>
             </nav>
             <button class="burger_menu__btn">Обсудить проект</button>
             <div class="burger_menu__phone">
@@ -365,16 +365,7 @@
             </div>
         </div>
     </section>
-    <section class="big_container" style="position: relative;">
-        <div id="support_left_ball" class="support_ball">
-            <img src="./img/left_ball.png" alt="left_ball" class="support_ball_img">
-        </div>
-        <div id="support_middle_ball" class="support_ball">
-            <img src="./img/middle_ball.png" alt="middle_ball" class="support_ball_img">
-        </div>
-        <div id="support_right_ball" class="support_ball">
-            <img src="./img/right_ball.png" alt="right_ball" class="support_ball_img">
-        </div>
+    <section class="container_fluid support_container_fluid">
         <div class="container">
             <div class="support">
                 <h1 class="support__title">
@@ -382,27 +373,48 @@
                 </h1>
                 <div class="support__cards">
                     <div class="support__card">
-                        <div class="support__image">
-                            <img src="./img/support_1.png" alt="support_1" class="support__img">
+                        <div id="support_left_ball" class="support_ball">
+                            <img src="./img/left_ball.png" alt="left_ball" class="support_ball_img">
                         </div>
-                        <div class="support__text">
-                            <p>Digital-продвижение</p>
+                        <div id="support_right_ball-mobile" class="support_ball-mobile">
+                            <img src="./img/right_ball.png" alt="right_ball_mobile" class="support_ball_img-mobile">
+                        </div>
+                        <div class="support__info">
+                            <div class="support__image">
+                                <img src="./img/support_1.png" alt="support_1" class="support__img">
+                            </div>
+                            <div class="support__text">
+                                <p>Digital-продвижение</p>
+                            </div>
                         </div>
                     </div>
                     <div class="support__card">
-                        <div class="support__image">
-                            <img src="./img/support_2.png" alt="support_2" class="support__img">
+                        <div id="support_middle_ball" class="support_ball">
+                            <img src="./img/middle_ball.png" alt="middle_ball" class="support_ball_img">
                         </div>
-                        <div class="support__text">
-                            <p>Техническая поддержка</p>
+                        <div class="support__info">
+                            <div class="support__image">
+                                <img src="./img/support_2.png" alt="support_2" class="support__img">
+                            </div>
+                            <div class="support__text">
+                                <p>Техническая поддержка</p>
+                            </div>
                         </div>
                     </div>
                     <div class="support__card">
-                        <div class="support__image">
-                            <img src="./img/support_3.png" alt="support_3" class="support__img">
+                        <div id="support_right_ball" class="support_ball">
+                            <img src="./img/right_ball.png" alt="right_ball" class="support_ball_img">
                         </div>
-                        <div class="support__text">
-                            <p>Доработки и обновления</p>
+                        <div id="support_left_ball-mobile" class="support_ball-mobile">
+                            <img src="./img/left_ball.png" alt="left_ball_mobile" class="support_ball_img-mobile">
+                        </div>
+                        <div class="support__info">
+                            <div class="support__image">
+                                <img src="./img/support_3.png" alt="support_3" class="support__img">
+                            </div>
+                            <div class="support__text">
+                                <p>Доработки и обновления</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -441,7 +453,7 @@
                                 <input type="text" name="" id="" placeholder="Имя" class="feedback__from_input">
                                 <input type="tel" name="" id="" placeholder="Телефон" class="feedback__from_input">
                                 <input type="email" name="" id="" placeholder="E-Mail" class="feedback__from_input">
-                                <input type="text" name="" id="" placeholder="Комментарий" class="feedback__from_input feedback__form_textarea">
+                                <textarea name="" id="" placeholder="Комментарий" class="feedback__from_input feedback__form_textarea"></textarea>
                                 <p class="feedback__form_small_text">
                                     Нажимая на кнопку "Отправить", вы даете согласие на обработку персональных 
                                     данных и ознакомились c политикой конфиденциальности

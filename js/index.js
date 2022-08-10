@@ -55,7 +55,7 @@ if (animItems.length > 0) {
             const animItem = animItems[i];
             const animItemHeight = animItem.offsetHeight;
             const animItemOffset = offset(animItem).top;
-            const animStart = 3;
+            const animStart = 2;
 
             let animItemPoint = window.innerHeight - animItemHeight / animStart;
             if (animItemHeight > window.innerHeight) {
@@ -84,40 +84,26 @@ if (animItems.length > 0) {
 }
 
 
-// собираем все якоря; устанавливаем время анимации и количество кадров
-const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
-      animationTime = 500,
-      framesCount = 64;
-
-anchors.forEach(function(item) {
-  // каждому якорю присваиваем обработчик события
-  item.addEventListener('click', function(e) {
-    // убираем стандартное поведение
-    e.preventDefault();
-    
-    // для каждого якоря берем соответствующий ему элемент и определяем его координату Y
-    let range = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top;
-    let coordY = range + window.scrollY;
-    let scrollBy = range / framesCount;
-    let startWindowScrollY = window.scrollY;
-
-    // alert(window.scrollY);
-    // alert(scrollBy);
-    // alert(coordY);
-
-    // запускаем интервал, в котором
-    let scroller = setInterval(function() {
-      // если к-во пикселей для скролла за 1 такт больше расстояния до элемента
-      // и дно страницы не достигнуто
-      if (window.scrollY + scrollBy < coordY && window.innerHeight + window.scrollY < document.body.offsetHeight) {
-        // то скроллим на к-во пикселей, которое соответствует одному такту
-        window.scrollBy(startWindowScrollY, scrollBy);
-      } else {
-        // иначе добираемся до элемента и выходим из интервала
-        window.scrollTo(0, coordY);
-        clearInterval(scroller);
-      }
-    // время интервала равняется частному от времени анимации и к-ва кадров
-    }, animationTime / framesCount);
-  });
-});
+let linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
+    V = 0.4;  // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+for (let i = 0; i < linkNav.length; i++) {
+    linkNav[i].addEventListener('click', function(e) { // по клику на ссылку
+        e.preventDefault(); //отменяем стандартное поведение
+        let w = window.scrollY,
+            hash = this.href.replace(/[^#]*(.*)/, '$1');  // id элемента, к которому нужно перейти
+        t = document.querySelector(hash).getBoundingClientRect().top - 64,  // отступ от окна браузера до id
+            start = null;
+        requestAnimationFrame(step);  // подробнее про функцию анимации [developer.mozilla.org]
+        function step(time) {
+            if (start === null) start = time;
+            let progress = time - start,
+                r = (t < 0 ? Math.max(w - progress/V, w + t) : Math.min(w + progress/V, w + t));
+            window.scrollTo(0,r);
+            if (r != w + t) {
+                requestAnimationFrame(step)
+            } else {
+                location.hash = hash  // URL с хэшем
+            }
+        }
+    }, false);
+}

@@ -44,8 +44,12 @@
 .header__logo_phone_mobile {
     display: none;
 }
+.support_ball-mobile {
+    display: none;
+}
 
 
+/* Доп. классы со стилями для контейнеров */
 .header_container_fluid {
     background-color: #F9F9F9;
     position: fixed;
@@ -444,6 +448,9 @@
 
 
 /* Поддержка */
+.support_container_fluid {
+    overflow-x: hidden;
+}
 .support {
     margin-bottom: 130px;
     width: 100%;
@@ -464,16 +471,22 @@
     align-items: center;
 }
 .support__card {
+    position: relative;
+    flex-basis: 27%;
+    z-index: 1;
+    padding: 0;
+}
+.support__info {
+    position: relative;
     background: #F9F9F9;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 32px;
-    flex-basis: 23%;
-    z-index: 1;
+    width: auto;
 }
 .support__image {
     text-align: center;
-    margin-bottom: 27px;
+    margin-bottom: 36px;
 }
 .support__text {
     font-family: 'Gilroy';
@@ -489,7 +502,6 @@
 }
 .support__card:nth-child(2) {
     margin-top: 75px;
-    z-index: 3;
 }
 .support__card:nth-child(3) {
     margin-top: 150px;
@@ -498,19 +510,18 @@
     position: absolute;
 }
 #support_left_ball {
-    left: 3%;
-    top: 23%;
-    z-index: 2;
+    top: 0;
+    z-index: 1;
+    left: -170px;
 }
 #support_middle_ball {
-    left: 29%;
-    top: 53%;
-    z-index: 2;
+    bottom: -100px;
+    left: -145px;
 }
 #support_right_ball {
-    right: 0;
-    top: 15%;
-    z-index: 2;
+    right: -250px;
+    top: -150px;
+    z-index: 1;
 }
 
 
@@ -585,9 +596,7 @@
     background: #F3F7F7;
     box-shadow: inset -1px -1px 10px rgba(0, 0, 0, 0.1), inset 1px 1px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    padding-top: 17px;
-    padding-bottom: 17px;
-    padding-left: 38px;
+    padding: 17px 17px 17px 38px;
 
     font-family: 'Gilroy';
     font-style: normal;
@@ -596,7 +605,7 @@
     line-height: 23px;
 }
 .feedback__form_textarea {
-    padding-bottom: 42px;
+    resize: vertical;
 }
 .feedback__form_btn {
     font-family: 'Gilroy';
@@ -725,6 +734,10 @@
         font-size: 20px;
     }
 
+    #support_middle_ball {
+        left: -120px;
+    }
+
     .partners__desc, 
     .work__desc,
     .principle__desc {
@@ -747,6 +760,7 @@
     .header__logo_text {
         display: none;
     }
+
     .main {
         padding-top: 80px;
     }
@@ -756,15 +770,21 @@
     .main__image {
         flex-basis: 43%;
     }
+
     .support__img {
         width: 80%;
     }
     .support__text {
         font-size: 20px;
     }
-    .support__card {
+    .support__info {
         padding: 22px;
     }
+    #support_middle_ball img {
+        width: 80%;
+        height: auto;
+    }
+
     .feedback__text_title {
         font-size: 33px;
     }
@@ -809,7 +829,7 @@
         font-style: normal;
         font-weight: 600;
         font-size: 10.98px;
-        line-height: 111.8%; /* or 12px */
+        line-height: 111.8%;
         color: #262626;
         opacity: 0.8;
         margin-bottom: 70px;
@@ -817,21 +837,27 @@
     .burger_menu__nav {
         margin-bottom: 114px;
     }
-    .burger_menu__item {
+    .burger_menu__nav_btn {
         padding: 20px 0 20px 0;
         box-sizing: border-box;
+        width: 100%;
+        background: none;
+        border: none;
     }
     .burger_menu__link {
+        display: block;
+        width: 100%;
         text-decoration: none;
         font-family: 'Gilroy';
         font-style: normal;
         font-weight: 500;
         font-size: 18.3px;
-        line-height: 22px; /* identical to box height */
+        line-height: 22px;
         color: #262626;
     }
-    .burger_menu__item:nth-child(1),
-    .burger_menu__item:nth-child(3) {
+    /* Поставим бордеры только у первой и второй кнопок */
+    .burger_menu__link:nth-child(1) .burger_menu__nav_btn:nth-child(1),
+    .burger_menu__link:nth-child(3) .burger_menu__nav_btn:nth-child(1) {
         border-top: 1.22px solid rgba(0, 80, 8, .2);
         border-bottom: 1.22px solid rgba(0, 80, 8, .2);
     }
@@ -842,7 +868,7 @@
         font-style: normal;
         font-weight: 500;
         font-size: 18.3px;
-        line-height: 22px; /* identical to box height */
+        line-height: 22px;
         color: #262626;
         background: none;
         padding: 14px 25px 14px 25px;
@@ -945,6 +971,50 @@
         width: 100%;
     }
 
+    .support__card:nth-child(1), 
+    .support__card:nth-child(2),
+    .support__card:nth-child(3),
+    .support__cards {
+        margin-top: 0;
+    }
+    .support__title {
+        margin-bottom: 50px;
+        text-align: left;
+    }
+    .support__cards {
+        display: block;
+    }
+    .support__card {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 49px;
+    }
+    .support__info {
+        flex-basis: 40%;
+    }
+    .support__text {
+        font-weight: 500;
+        font-size: 30.781px;
+        line-height: 36px;
+        margin-bottom: 30px;
+    }
+    .support_ball {
+        display: none;
+    }
+    .support_ball-mobile {
+        display: block;
+        position: absolute;
+        z-index: 1;
+    }
+    #support_left_ball-mobile {
+        top: -40px;
+        left: 70px;
+    }
+    #support_right_ball-mobile {
+        right: -40px;
+        bottom: -200px;
+    }
+
     .principle {
         margin-bottom: 70px;
         padding: 34px 27px 34px 27px;
@@ -991,6 +1061,17 @@
         margin-bottom: 23px;
     }
 }
+/* Корректировки шаров в разделе "Поддержим проект после запуска" */
+@media (max-width: 828px) {
+    #support_left_ball-mobile img, 
+    #support_right_ball-mobile img {
+        width: 80%;
+        height: auto;
+    }
+    #support_right_ball-mobile {
+        right: -60px;
+    }
+}
 
 /* Доп. корректировки под планшеты меньших размеров */
 @media (max-width: 680px) {
@@ -1004,6 +1085,13 @@
         line-height: 50px;
     }
     
+    #support_right_ball-mobile {
+        right: -100px;
+    }
+    #support_left_ball-mobile {
+        left: 30px;
+    }
+
     .principle__desc {
         font-size: 21.5px;
     }
@@ -1059,9 +1147,17 @@
     }
 
     .work__desc,
+
     .partners__desc {
         font-size: 20px;
     }
+
+    /* Скрываем все шары в разделе поддержки проекта */
+    .support_ball,
+    .support_ball-mobile {
+        display: none;
+    }
+
     .work__cards {
         display: none;
     }
@@ -1186,10 +1282,6 @@
 }
 
 
-
-
-
-
 /* Анимации для кнопок */
 .animate_border_bottom_btn {
     position: relative;
@@ -1250,89 +1342,8 @@
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-  
 
-
-  /* .btn2 {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    overflow: hidden;
-  }
-  .btn2:before, .btn2:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background-color: none;
-  }
-  .btn2:before {
-    top: 0;
-  }
-  .btn2:after {
-    bottom: 0;
-  }
-  .btn2:hover > * > *:before, .btn2:hover > * > *:after {
-    transform: translate3d(0, 0, 0);
-  }
-  .btn2:hover > * > * > *:before, .btn2:hover > * > * > *:after {
-    transform: translate3d(0, 0, 0);
-  }
-  .btn2 > *:before, .btn2 > *:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 2px;
-    background-color: none;
-  }
-  .btn2 > *:before {
-    left: 0;
-  }
-  .btn2 > *:after {
-    right: 0;
-  }
-  .btn2 > * > *:before, .btn2 > * > *:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    z-index: 9;
-    height: 2px;
-    width: 100%;
-    background-color: #ADE100;
-  }
-  .btn2 > * > *:before {
-    top: 0;
-    transform: translate3d(-105%, 0, 0);
-    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .btn2 > * > *:after {
-    bottom: 0;
-    transform: translate3d(105%, 0, 0);
-    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .btn2 > * > * > *:before, .btn2 > * > * > *:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    z-index: 9;
-    height: 100%;
-    width: 2px;
-    background-color: #ADE100;
-  }
-  .btn2 > * > * > *:before {
-    left: 0;
-    transform: translate3d(0, 105%, 0);
-    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .btn2 > * > * > *:after {
-    right: 0;
-    transform: translate3d(0, -105%, 0);
-    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-  } */
-
-
+/* Анимация блеска для кнопки в разделе main */
 .animate_shine_btn {
     position: relative;
     overflow: hidden;
