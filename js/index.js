@@ -112,9 +112,7 @@ for (let i = 0; i < linkNav.length; i++) {
             window.scrollTo(0,r);
             if (r != w + t) {
                 requestAnimationFrame(step)
-            } else {
-                location.hash = hash  // URL с хэшем
-            }
+            } 
         }
     }, false);
 }
