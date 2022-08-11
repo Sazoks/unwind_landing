@@ -26,25 +26,14 @@
 
 
 /* Скроем мобильные элементы изначально */
-.header__burger_icon {
-    display: none;
-}
-#services__image_2_mobile {
-    display: none;
-}
-.footer__icons_and_email_mobile {
-    display: none;
-}
-.work__cards_mobile {
-    display: none;
-}
-.burger_menu {
-    display: none;
-}
-.header__logo_phone_mobile {
-    display: none;
-}
-.support_ball-mobile {
+.header__burger_icon,
+#services__image_2_mobile,
+.footer__icons_and_email_mobile,
+.work__cards_mobile,
+.burger_menu,
+.header__logo_phone_mobile,
+.support_ball-mobile,
+.principle-mobile {
     display: none;
 }
 
@@ -527,11 +516,22 @@
 
 /* Гланвый принцип */
 .principle {
-    border: 10px solid;
-    border-image-source: url(../img/borders_angle.png);
-    border-image-slice: 10;
-    padding: 35px 75px 35px 75px;
+    position: relative;
+    width: auto;
+    padding: 15px 75px 75px 75px;
     margin-bottom: 30px;
+}
+.principle__angle_img {
+    position: absolute;
+    z-index: -1;
+}
+#principle__left_bottom_angle {
+    left: 0;
+    bottom: 0;
+}
+#principle__right_top_angle {
+    right: 0;
+    top: 0;
 }
 .principle__title {
     font-family: 'Days One';
@@ -1016,8 +1016,27 @@
     }
 
     .principle {
+        display: none;
+    }
+    .principle-mobile {
+        display: block;
         margin-bottom: 70px;
+    }
+    .principle__desc_and_angles {
+        position: relative;
         padding: 34px 27px 34px 27px;
+    }
+    .principle__angle_img {
+        width: 90px;
+        height: auto;
+    }
+    #principle__left_bottom_angle-mobile {
+        left: 0;
+        bottom: 0;
+    }
+    #principle__right_top_angle-mobile {
+        top: 0;
+        right: 0;
     }
 
     .feedback__form_and_text {
@@ -1095,6 +1114,10 @@
     .principle__desc {
         font-size: 21.5px;
     }
+    .principle__angle_img {
+        width: 75px;
+        height: auto;
+    }
 
     .services__item {
         padding: 0;
@@ -1156,6 +1179,10 @@
     .support_ball,
     .support_ball-mobile {
         display: none;
+    }
+    .support__text {
+        font-size: 25px;
+        line-height: 35px;
     }
 
     .work__cards {
@@ -1228,6 +1255,10 @@
     .main__title {
         font-size: 27px;
     }
+    .support__text {
+        font-size: 20px;
+        line-height: 25px;
+    }
     .feedback__text_title {
         font-size: 30px;
     }
@@ -1268,6 +1299,9 @@
         width: 50px;
         height: autp;
     }
+    .support__text {
+        font-size: 18px;
+    }
     .footer__company_name, 
     .footer__privacy_policy {
         font-size: 12px;
@@ -1282,7 +1316,7 @@
 }
 
 
-/* Анимации для кнопок */
+/* Анимации для кнопок в шапке */
 .animate_border_bottom_btn {
     position: relative;
     display: inline-block;

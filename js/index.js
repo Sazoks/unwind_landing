@@ -1,3 +1,4 @@
+// Настройки слайдера в разделе партнеров.
 let slider = tns({
     container: document.getElementById('partners__slider'),
     items: 1,
@@ -27,6 +28,8 @@ let slider = tns({
 let burger_icon_close = false;
 let burger_btn = document.getElementById('header__burger_icon');
 
+// За открытие и закрытие меню бургера отвечает один и тот же элемент.
+// У него просто меняем атрибут src.
 burger_btn.addEventListener('click', function() {
     let burger_icon_img = burger_btn.getElementsByTagName('img')[0];
     let burger_menu = document.getElementById('burger_menu');
@@ -48,15 +51,21 @@ burger_btn.addEventListener('click', function() {
 const animItems = document.querySelectorAll('._anim_items');
 
 if (animItems.length > 0) {
+    // Вешаем обработчик событий на окно при скроле.
     window.addEventListener('scroll', animOnScroll);
 
+    // Функция, которая будет активировать CSS-анимации, добавляя класс _active.
     function animOnScroll() {
+        // Проходимся по каждому элементу, подлежащему анимации при скролле.
         for (let i = 0; i < animItems.length; i++) {
             const animItem = animItems[i];
             const animItemHeight = animItem.offsetHeight;
             const animItemOffset = offset(animItem).top;
-            const animStart = 2;
+            // Коэффициент задержки анимации. 
+            // Анимация срабатывает, когда будет видна 1/animStart часть объекта.
+            const animStart = 2; 
 
+            // Точка для запуска анимации.
             let animItemPoint = window.innerHeight - animItemHeight / animStart;
             if (animItemHeight > window.innerHeight) {
                 animItemPoint = window.innerHeight - window.innerHeight / animStart;
@@ -68,6 +77,7 @@ if (animItems.length > 0) {
         }
     }
 
+    // Кроссбраузерная функция для получения координат объекта.
     function offset(e1) {
         const rect = e1.getBoundingClientRect(),
             scrollLeft = window.scrollX || document.documentElement.scrollLeft,
@@ -78,6 +88,7 @@ if (animItems.length > 0) {
         }
     }
 
+    // Каждая анимация будет срабатывать с задержкой в 300мс.
     setTimeout(() => {
         animOnScroll();
     }, 300);
